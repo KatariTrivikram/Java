@@ -1,0 +1,31 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Example {
+    public static void main(String[] args) {
+        System.out.println("Enter a number:");
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        if (n > 20 || n < 0)
+            System.out.println("Invalid number");
+        else {
+            int[] numbers = new int[n];
+            printArrayElements(numbers);
+            displayArray(numbers);
+
+        }
+    }
+        public static void printArrayElements(int[] numbers){
+            Scanner s=new Scanner(System.in);
+            for(int i=0;i<numbers.length;i++){
+                numbers[i]=s.nextInt();
+
+            }
+
+        }
+        public static void displayArray(int[] numbers){
+            System.out.print("Enter the Elements:");
+            System.out.println(Arrays.toString(numbers));
+        }
+
+}
