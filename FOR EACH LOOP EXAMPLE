@@ -1,0 +1,10 @@
+
+class Main{
+    public static void main(String[] args) {
+        int[] arr = {5,3,2,1};
+        int i=0;
+        for(int item : arr) {
+            System.out.println(item + " " + i++);
+        }
+    }
+}
