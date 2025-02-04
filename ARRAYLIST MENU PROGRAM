@@ -1,0 +1,44 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class Example{
+    public static void main(String[] args) {
+        ArrayList<Integer> integers = new ArrayList<>();
+        Scanner s=new Scanner(System.in);
+        while (true){
+                displayMenu();
+               System.out.println("Enter Your Choice :");
+                int choice =s.nextInt();
+                if(choice == 1){
+                    System.out.print("Enter an integer :");
+                    integers.add(s.nextInt());
+                    System.out.println("Added.");
+                }
+                else if(choice == 2){
+                    System.out.print("Enter the number to remove :");
+                    int elementToRemove =s.nextInt();
+                    if(integers.contains(elementToRemove)){
+                        integers.remove(new Integer(elementToRemove));
+                        System.out.println("Removed.");
+                    }else
+                        System.out.println("Element not found");
+                }
+                else if(choice == 3){
+                    System.out.println("Your List : " + integers);
+                }
+                else if(choice == 4){
+                    System.out.println("Good bye");
+                    break;
+                }
+        }
+
+    }
+    private static void displayMenu(){
+        System.out.println();
+        System.out.println("1.ADD");
+        System.out.println("2.REMOVE");
+        System.out.println("3.DISPLAY");
+        System.out.println("4.EXIT");
+        System.out.println();
+    }
+}
