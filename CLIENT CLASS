@@ -1,0 +1,77 @@
+import java.util.ArrayList;
+public class Client {
+    private int id;
+    private String name;
+    private String phone;
+    private ArrayList<Account> accounts;
+    public Client (int id,String name,String phone){
+        this.id = id;
+        this.name = name;
+        this.phone = phone;
+        accounts = new ArrayList<>();
+    }
+    public boolean addAccount(Account account){
+        accounts.add(account);
+        return true;
+    }
+    public boolean removeAccount(int accountId){
+        for(Account account : accounts)
+            if(account.getId() == accountId) {
+                accounts.remove(account);
+                return true;
+            }
+        return false;
+    }
+    public String toString(){
+        String s = this.id+ " " + this.name + " " + this.phone + "\n";
+        for(Account account : accounts)
+            s += account.toString()+"\n";
+
+        return s;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+}
+public class Main
+{
+    public static void main(String args[])
+    {
+       Client[] clients = new Client[2];
+       clients[0] = new Client(1,"vikram","4189843792");
+       clients[1] = new Client(2,"Raju","8928933723");
+
+       clients[0].addAccount(new Account(24,5000,4.2));
+       clients[0].addAccount(new Account(54,4500,5.1));
+
+       clients[1].addAccount(new Account(31,6000,1.3));
+       clients[1].addAccount(new Account(27,9000,2.5));
+       clients[1].addAccount(new Account(43,20000,5.7));
+
+        System.out.println(clients[0].toString());
+        System.out.println(clients[1].toString());
+    }
+}
+
+
