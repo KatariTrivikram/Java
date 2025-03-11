@@ -1,0 +1,18 @@
+class Palindrome{
+    public static void main(String[] args) {
+        int n = 1321, reverse = 0, m;
+        if (getReverse(n, reverse) == n)
+            System.out.println(n + " is a palindrome");
+        else
+            System.out.println(n + " is not a palindrome");
+    }
+         static int getReverse ( int n, int rev){
+            if (n == 0)
+                return rev;
+            int m = n%10;
+            rev =rev*10+m;
+            return getReverse(n/10,rev);
+
+        }
+
+}
