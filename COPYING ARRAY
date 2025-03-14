@@ -1,0 +1,10 @@
+class ArrayCopyExampple {
+
+    public static void main(String[] args) {
+        char copyFrom[]={'a','c','t','o','r','s'};
+        char copyTo[]=new char[5];
+        System.arraycopy(copyFrom,0,copyTo,0,5);
+        System.out.println(String.valueOf(copyTo));
+
+    }
+}
