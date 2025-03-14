@@ -1,0 +1,31 @@
+import java.util.*;
+class Amstrong {
+    static boolean amstrongNumber(int n) {
+        int t, sum = 0, digit = 0, last;
+        t = n;
+        while (t > 0) {
+            t = t / 10;
+            digit++;
+        }
+        t = n;
+        while (t > 0) {
+            last = t % 10;
+            sum += (int) (Math.pow(last, digit));
+            t = t / 10;
+        }
+        if (n == sum)
+            return true;
+        else
+            return false;
+    }
+        public static void main(String args[]){
+            Scanner s=new Scanner(System.in);
+            int n=s.nextInt();
+            System.out.println("The amstrong numbers upto "+n+" is:");
+            for(int i=0;i<=n;i++){
+                if(amstrongNumber(i))
+                    System.out.print(i+",");
+            }
+        }
+
+}
