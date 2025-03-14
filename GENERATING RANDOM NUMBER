@@ -1,0 +1,14 @@
+import java.lang.Math;
+class viram {
+    public static void main(String[] args) {
+        int max=400;
+        int min=200;
+        double t1=Math.random()*(max-min+1)+min; // getting in range of 200 to exclusive 400
+        System.out.println(t1);
+        int t2=(int)Math.random()*(max-min+1)+min;
+        System.out.println(t2);
+       System.out.println(Math.random()); // for generating random number between inclusive 0.0 and exclusive 1.0
+        System.out.println(Math.random());
+
+    }
+}
