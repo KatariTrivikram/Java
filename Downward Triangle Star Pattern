@@ -1,0 +1,14 @@
+import java.util.*;
+class DownwardTriangleExample{
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int r=s.nextInt();
+        for(int i=0;i<r;i++){
+            for(int j=r;j>i;j--){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
