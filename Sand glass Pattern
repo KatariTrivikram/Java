@@ -1,0 +1,31 @@
+import java.util.*;
+class SandglassPattern {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int r=s.nextInt(),space=r;
+        for(int i=0;i<r;i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print(" ");
+            }
+
+            for (int j = space; j > 0; j--) {
+                System.out.print("* ");
+            }
+            space--;
+            System.out.println();
+        }
+        space=r+1;
+        for(int i=0;i<r;i++) {
+            for (int j = 2; j < space; j++) {
+                System.out.print(" ");
+            }
+            space--;
+            for (int j = 0; j <=i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+    }
+}
