@@ -1,0 +1,11 @@
+
+class MathExample{
+    public static void main(String[] args) {
+        System.out.println("absolute number:" +Math.abs(-10));
+        System.out.println("power:" +Math.pow(10,2));
+        System.out.println("square root:"+Math.sqrt(25));
+        System.out.println("minimum:" +Math.min(10,5));
+        System.out.println("maximum:"+Math.max(11,27));
+        System.out.println("random number:" +(int)Math.random()*10);
+    }
+}
