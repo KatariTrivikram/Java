@@ -1,0 +1,36 @@
+import java.util.*;
+class  NumberToWord{
+    public static void main(String args[]) {
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter a number:");
+        int n=s.nextInt();
+        if(n<0 || n>9999)
+            System.out.println("Invalid");
+        else {
+            int a=n%10;
+            int b=n/10;
+            int c=b%10;
+            int d=n/100;
+            int e=d%10;
+            int f=n/1000;
+            String[] sD= {"", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eigthteen", "nineteen"};
+            String[] t = {"", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eigthty", "ninty"};//tens
+            String h = "hundred";
+            String th = "thousand";
+            if(n<20){
+                System.out.println(sD[n]);
+            }
+            else if(n>=20 && n<100 ){
+                System.out.println(t[c]+" "+sD[a]);
+            }
+            else if(n>=100 && n<1000){
+                System.out.println(sD[d]+" "+h+" "+t[c]+" "+sD[a]);
+            }
+            else if(n>=1000 && n<10000){
+                System.out.println(sD[f]+" "+th+" "+sD[d]+" "+h+" "+t[c]+" "+sD[a]);
+            }
+        }
+
+
+    }
+}
