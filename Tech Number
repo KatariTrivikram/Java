@@ -1,0 +1,27 @@
+import java.util.*;
+class TechNumberExample{
+    public static void main(String[] args) {
+        int n,num,firstHalf,secondHalf,count=0,su;
+        Scanner s=new Scanner(System.in);
+         n=s.nextInt();
+        num=n;
+        while(num>0){
+            count++;
+            num=num/10;
+        }
+        if(count%2==0){
+            firstHalf=n%(int)Math.pow(10,count/2);
+            secondHalf=n/(int)Math.pow(10,count/2);
+            su=(firstHalf+secondHalf)*(firstHalf+secondHalf);
+            if(su==n){
+                System.out.println("Tech number");
+            }
+            else
+                System.out.println("not a tech number");
+
+        }
+        else {
+            System.out.println("count is not even");
+        }
+    }
+}
